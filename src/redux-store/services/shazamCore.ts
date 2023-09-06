@@ -2,7 +2,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 // RapidAPi = Shazam Core
-// https://rapidapi.com/tipsters/api/shazam-core?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=referral&utm_campaign=DevRel
 
 // redux
 export const shazamCoreApi = createApi({

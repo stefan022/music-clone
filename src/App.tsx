@@ -5,10 +5,10 @@ import { useSelector } from "react-redux";
 import { Routes, Route } from 'react-router-dom'
 
 // components
-import { SearchBar, Sidebar, MusicPlayer, TopPlay } from "./components";
+import { Sidebar, MusicPlayer, TopPlay } from "./components";
 
 // pages
-import { TopArtists, AroundYou, Discover, Search, SongDetails } from "./pages";
+import { TopArtists, AroundYou, Discover, SongDetails } from "./pages";
 
 const App = () => {
   const { activeSong } = useSelector((state) => state.player);
@@ -17,16 +17,13 @@ const App = () => {
     <div className="relative flex">
       <Sidebar />
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
-        <SearchBar />
-
-        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
+        <div className="px-6 h-screen overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
           <div className="flex-1 h-fit pb-40">
             <Routes>
               <Route path="/" element={ <Discover/> }/>
               <Route path="/top-artists" element={ <TopArtists/> }/>
               <Route path="/around-you" element={ <AroundYou/> }/>
               <Route path="/songs/:songId" element={ <SongDetails/> }/>
-              <Route path="/search/:searchTerm" element={ <Search/> }/>
             </Routes>
           </div>
           <div className="xl:sticky relative top-0 h-fit">

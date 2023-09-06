@@ -9,9 +9,6 @@ import App from './App'
 
 import { store } from './redux-store/store'
 
-// provajder oko aplikacije znači da
-// svakaki fajl unutar aplikacije 
-// ima  pristup => store.js
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
